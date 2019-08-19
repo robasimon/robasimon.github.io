@@ -148,7 +148,6 @@ nav svg{
     z-index: 2;
 }
 .portrait img{
-    filter: brightness(60%);
     object-fit: cover;
     width: 400px;
     height: 450px;
