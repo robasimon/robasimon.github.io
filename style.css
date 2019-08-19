@@ -1,0 +1,158 @@
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.rob{
+    color: white;
+    background: radial-gradient(rgb(33,42,57), rgb(25, 35, 51));
+    /*background: radial-gradient(rgba(43,55,96,1), rgba(11,16,35,1));*/
+}
+@font-face{
+    font-family: PopLight;
+    src: url('Poppins/Poppins-Light.ttf');
+}
+@font-face{
+    font-family: PopReg;
+    src: url('Poppins/Poppins-Regular.ttf');
+}
+nav{
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: PopReg;
+    color: white;
+}
+nav svg{
+    cursor: pointer; 
+}
+nav svg:hover {
+    transform: scale(1.2);
+}
+nav svg{
+    transition: all 0.5s;
+    transform-origin: 50% 50%;
+  }
+
+.page{
+    min-height: 90vh;
+    display:grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.details{
+    grid-column: 2/3;
+    align-self: end;
+    min-height: 33vh;
+}
+.details h1{
+    font-size: 54px;
+}
+.details h2{
+    font-size: 32px;
+    font-family: PopLight;
+    padding: 20px 0px;
+}
+.pages{
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    transform: translateY(-50%);
+}
+.pages > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pages h3{
+    font-size: 24px;
+    padding: 20px;
+    color: white;
+}
+.pages svg{
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(2);
+}
+.pages svg:hover{
+    animation: dot 0.5s ease infinite alternate;
+}
+.pages svg.active{
+    opacity: 1;
+}
+@keyframes dot {
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(2.5);
+    }
+}
+
+.about{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 60vh;
+    color: white;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-column: 2;
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    opacity: 0;
+}
+
+.about p{
+    font-family: PopReg;
+    font-size: 18px;
+    
+}
+.about h3{
+    font-family: PopReg;
+    font-size: 28px;
+    padding: 0px 0px 20px 0px;
+    text-align: center;
+    
+}
+
+.nav-open{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height:40vh;
+    background: white;
+    z-index: 1;
+    color: black;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    justify-items: center;
+    align-items: center;
+    transform: translateY(-100%);
+}
+.contact {
+    grid-column: 2/3;
+}
+.nav-open h3{
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+.logo,.menu {
+    z-index: 2;
+}
+.portrait img{
+    filter: brightness(60%);
+    object-fit: cover;
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 8px white inset;
+    
+}
