@@ -39,14 +39,16 @@ nav svg{
 
 .page{
     min-height: 90vh;
-    display:grid;
-    grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
 
 .details{
-    grid-column: 2/3;
-    align-self: end;
+    
     min-height: 33vh;
+    
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    
 }
 .details h1{
     font-size: 54px;
@@ -95,14 +97,13 @@ nav svg{
 
 .about{
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    min-height: 60vh;
+    top: 0;
+    left: 0;
+    max-height: 90vh;
     color: white;
-    display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    grid-column: 2;
+    margin-top: 250px;
+    margin-right: 250px;
+    margin-left: 250px;
     align-self: center;
     justify-content: center;
     justify-items: center;
@@ -147,11 +148,49 @@ nav svg{
 .logo,.menu {
     z-index: 2;
 }
-.portrait img{
-    object-fit: cover;
-    width: 400px;
-    height: 450px;
-    border-radius: 15px;
-    box-shadow: 0 0 8px 8px white inset;
+img {
     
+    height: 450px;
+    width: 420px;
+    border-radius: 10px;
+    /*box-shadow: 5px 5px 5px grey;*/
+    border:1px solid rgb(5, 5, 5);
+    box-shadow: 4px 4px 3px rgb(5, 5, 5);
+
+ }
+div.portrait {
+    text-align: center;
+    max-height: 90vh;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    margin-top: -230px;
 }
+.caption {
+    padding-top: 50px;
+    display: block;
+    font-family: PopReg;
+    color: white;
+    font-size: 54px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+.caption2 {
+    font-family: PopLight;
+    color: white;
+    font-size: 42px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+html{
+    margin:0;
+    padding:0;
+    max-height:100vh;
+    overflow:hidden;
+  }
+  
+  body {
+    height: 100%;
+  }
