@@ -356,15 +356,15 @@ html{
   @media screen and (max-width: 440px){
     
     img{
-      margin-left: -70px;
+      margin-left: -60px;
       
     }
     .caption{
-        margin-left: -45px;
+        margin-left: -35px;
         text-align: center;
     }
     .caption2{
-        margin-left: -25px;
+        margin-left: -15px;
         text-align: center;
     }
   }
