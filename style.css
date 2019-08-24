@@ -36,19 +36,19 @@ nav svg{
     transition: all 0.5s;
     transform-origin: 50% 50%;
   }
-
+.mobile{
+   opacity: 0;
+   pointer-events: none;
+}
 .page{
     min-height: 90vh;
 }
 
 .details{
-    
     min-height: 33vh;
-    
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    
 }
 .details h1{
     font-size: 54px;
@@ -101,9 +101,9 @@ nav svg{
     left: 0;
     max-height: 90vh;
     color: white;
-    margin-top: 250px;
-    margin-right: 300px;
-    margin-left: 300px;
+    margin-top: 20%;
+    margin-right: 20%;
+    margin-left: 20%;
     align-self: center;
     justify-content: center;
     justify-items: center;
@@ -193,4 +193,178 @@ html{
   
   body {
     height: 100%;
+  }
+
+  @media screen and (max-width: 1074px)
+  {
+      .caption{
+          font-size: 40px;
+      }
+      .caption2 {
+          font-size: 28px;
+      }
+      img{
+          height: 380px;
+          width: 350px;
+          margin-left: -15px;
+      }
+    .portrait{
+        margin-right: auto;
+    }
+    .about{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .about p{
+        font-size: 18px;
+    }
+    .about h3{
+        font-size: 22px;
+    }
+    .pages h3{
+        font-size: 22px;
+    }
+  }
+
+  @media screen and (max-width: 794px)
+  {
+    img{
+        height: 380px;
+        width: 350px;
+        margin-left: -50px;
+    }
+      .caption{
+          font-size: 34px;
+         
+          margin-left: -50px;
+      }
+      .caption2 {
+          font-size: 22px;
+          margin-left: -50px;
+      }
+      .about{
+          margin-left:10%;
+      }
+      .about h3{
+          font-size: 24px;
+        
+      }
+      .about p{
+          font-size: 16px;
+      }
+      .pages h3{
+          font-size: 20px;
+      }
+  }
+  @media screen and (max-width: 678px)
+  {
+    img{
+        height: 300px;
+        width: 270px;
+        margin-left: -50px;
+    }
+      .caption{
+          font-size: 28px;
+          margin-right: 0px;
+          
+      }
+      .caption2 {
+          font-size: 20px;
+          margin-right: 0px;
+        
+      }
+      .about h3{
+        font-size: 20px;
+      
+    }
+    .about p{
+        font-size: 13px;
+    }
+  }
+  @media screen and (max-width: 540px)
+  {
+    
+    .pages{
+        pointer-events: none;
+        opacity: 0;
+    }
+    
+    div.portrait{
+        margin: -200px auto;
+        text-align: center;
+        
+    }
+    img{
+        margin-right: 30%;
+    }
+    .caption{
+        text-align: center;
+        
+        margin-left: -11%;
+        white-space: nowrap;
+    }
+    .caption2{
+        text-align: center;
+        
+        white-space: nowrap;
+        margin-left: -11%;
+        margin-right: 0%;
+    }
+   
+    .mobile {
+        
+        opacity: 1;
+        z-index: 2;
+        grid-column: 3/4;
+        margin-right: -50%;
+        pointer-events: all;
+        color: black;
+        text-decoration: none;
+    }
+    
+    .mobile h3{
+        font-size: 15px;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        opacity:1;
+    }
+    .mobile a{
+        text-decoration: none;
+    }
+   
+    .about{
+        margin-left: 5%;
+        padding: 0;
+        margin-right: 5%; 
+        margin-top: 25%;
+    }
+    .about p{
+        font-family: PopReg;
+        font-size: 14px;
+        text-align: justify;
+        
+    }
+    .about h3{
+        font-family: PopReg;
+        font-size: 18px;
+        padding: 0px 0px 20px 0px;
+    }
+    
+  }
+  @media screen and (max-width: 440px){
+    
+    img{
+      margin-left: -70px;
+      
+    }
+    .caption{
+        margin-left: -45px;
+        text-align: center;
+    }
+    .caption2{
+        margin-left: -25px;
+        text-align: center;
+    }
   }

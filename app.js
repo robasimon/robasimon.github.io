@@ -1,13 +1,43 @@
 function init(){
     const slides = document.querySelectorAll(".slide");
     const pages = document.querySelectorAll(".page");
+    mobile1 = document.querySelector(".navigation-1");
+    mobile2 = document.querySelector(".navigation-2");
     let current = 0;
+    mobile1.addEventListener("click", function(){
+        homePage();
+    });
+    mobile2.addEventListener("click", function(){
+        homePage2();
+    });
     slides.forEach((slide,index) => {
         slide.addEventListener('click', function(){
             changeDots(this);
             nextSlide(index);
         });
     });
+    function homePage(){
+        const nextPage = pages[0];
+        const currentPage = pages[1];
+        const nextText = nextPage.querySelector(".details");
+        const currentText = currentPage.querySelector(".details");
+        const tl = new TimelineMax();
+        tl.fromTo(currentPage, 0.1, {opacity: 1}, {opacity: 0})
+        .fromTo(nextPage, 0.1, {opacity: 0}, {opacity: 1},"-=0.1s")
+        .fromTo(currentText, 0.1, {opacity: 1}, {opacity: 0})
+        .fromTo(nextText, 0.1, {opacity: 0}, {opacity: 1},"-=0.3s");
+    }
+    function homePage2(){
+        const nextPage = pages[1];
+        const currentPage = pages[0];
+        const nextText = nextPage.querySelector(".details");
+        const currentText = currentPage.querySelector(".details");
+        const tl = new TimelineMax();
+        tl.fromTo(currentPage, 0.1, {opacity: 1}, {opacity: 0})
+        .fromTo(nextPage, 0.1, {opacity: 0}, {opacity: 1},"-=0.1s")
+        .fromTo(currentText, 0.1, {opacity: 1}, {opacity: 0})
+        .fromTo(nextText, 0.1, {opacity: 0}, {opacity: 1},"-=0.3s");
+    }
     function changeDots(dot){
         slides.forEach(slide=>{
             slide.classList.remove("active");
@@ -27,7 +57,9 @@ function init(){
         .fromTo(currentText, 0.1, {opacity: 1}, {opacity: 0})
         .fromTo(nextText, 0.1, {opacity: 0}, {opacity: 1},"-=0.3s");
         current = pageNumber;
+        
     }
+    
     
     const menu = document.querySelector('.menu');
     const menuLines = document.querySelectorAll('.menu line');
@@ -44,7 +76,7 @@ function init(){
 
     menu.addEventListener('click', ()=>{
         tl.reversed() ? tl.play() : tl.reverse();
-    })
+    });
 
 }
 
