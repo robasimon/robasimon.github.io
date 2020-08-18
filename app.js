@@ -5,12 +5,12 @@ function init(){
     mobile1 = document.querySelector(".navigation-1");
     mobile2 = document.querySelector(".navigation-2");
     let current = 0;
-    mobile1.addEventListener("click", function(){
-        homePage();
-    });
-    mobile2.addEventListener("click", function(){
-        homePage2();
-    });
+    // mobile1.addEventListener("click", function(){
+    //     homePage();
+    // });
+    // mobile2.addEventListener("click", function(){
+    //     homePage2();
+    // });
     // mobilePages.forEach((page,index) => {
     //     page.addEventListener('click', function(){
     //         console.log(mobilePages)
