@@ -109,7 +109,47 @@ nav svg{
     justify-items: center;
     opacity: 0;
 }
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color:radial-gradient(rgb(33,42,57), rgb(25, 35, 51));
+    height: auto;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .modal-content:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 200%;
+  }
+  
+  /* The Close Button */
+ 
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 .about p{
     font-family: PopReg;
     font-size: 18px;
@@ -139,13 +179,13 @@ nav svg{
 .scrolling::-webkit-scrollbar
 {
 	width: 12px;
-	background-color: #969696;
+	background-color: radial-gradient(rgb(33,42,57), rgb(25, 35, 51));
 }
 
 .scrolling::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    -webkit-box-shadow: inset 0 0 px rgba(0,0,0,.3);
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
 }
@@ -183,6 +223,16 @@ nav svg{
     height: auto;
     width: 15%;
     
+}
+.app-1:hover{
+    cursor: pointer;
+}
+.modal-app-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .link-1{
     margin-top: 30px;
