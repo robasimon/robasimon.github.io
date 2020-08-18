@@ -101,7 +101,7 @@ nav svg{
     left: 0;
     max-height: 90vh;
     color: white;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-right: 20%;
     margin-left: 20%;
     align-self: center;
@@ -117,12 +117,86 @@ nav svg{
 }
 .about h3{
     font-family: PopReg;
-    font-size: 28px;
+    font-size: 42px;
     padding: 0px 0px 20px 0px;
     text-align: center;
     
 }
+.scrolling{
+    height: 70vh;
+    padding-bottom: 20%;
+    overflow-y: scroll;
+    padding-right: 40px;
+}
+.scrolling::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #969696;
+}
 
+.scrolling::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #969696;
+}
+
+.scrolling::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+.projects{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 90vh;
+    color: white;
+    margin-top: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    opacity: 0;
+}
+.projects p{
+    font-family: PopReg;
+    font-size: 18px;
+    
+}
+.projects h3{
+    font-family: PopReg;
+    font-size: 42px;
+    padding: 0px 0px 20px 0px;
+    text-align: center;
+    
+}
+.app-1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 15%;
+    
+}
+.link-1{
+    margin-top: 30px;
+    text-align: center;
+    margin-left: -48px;
+    margin-right: auto;
+}
+.link-1 a{
+    color: white;
+    font-size: 18px;
+}
+.projects a:hover{
+    color: blueviolet;
+}
 .nav-open{
     position: absolute;
     top: 0px;
@@ -219,10 +293,10 @@ html{
         font-size: 18px;
     }
     .about h3{
-        font-size: 22px;
+        font-size: 42px;
     }
     .pages h3{
-        font-size: 22px;
+        font-size: 42px;
     }
   }
 

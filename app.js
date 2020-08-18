@@ -1,6 +1,7 @@
 function init(){
     const slides = document.querySelectorAll(".slide");
     const pages = document.querySelectorAll(".page");
+    const mobilePages = document.querySelectorAll(".navigation")
     mobile1 = document.querySelector(".navigation-1");
     mobile2 = document.querySelector(".navigation-2");
     let current = 0;
@@ -10,6 +11,13 @@ function init(){
     mobile2.addEventListener("click", function(){
         homePage2();
     });
+    // mobilePages.forEach((page,index) => {
+    //     page.addEventListener('click', function(){
+    //         console.log(mobilePages)
+    //         changeDots(this);
+    //         nextSlide(index);
+    //     });
+    // });
     slides.forEach((slide,index) => {
         slide.addEventListener('click', function(){
             changeDots(this);
@@ -45,11 +53,17 @@ function init(){
         dot.classList.add("active");
     }
     function nextSlide(pageNumber){
+        if(pageNumber == 3){
+            pageNumber = 2;
+        }
+        if(current == pageNumber){
+            return
+        }
+        
         const nextPage = pages[pageNumber];
         const currentPage = pages[current];
         const nextText = nextPage.querySelector(".details");
         const currentText = currentPage.querySelector(".details");
-        
         const tl = new TimelineMax();
 
         tl.fromTo(currentPage, 0.1, {opacity: 1}, {opacity: 0})
