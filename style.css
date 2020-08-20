@@ -481,13 +481,16 @@ html{
         font-size: 18px;
         padding: 0px 0px 20px 0px;
     }
-    
+    .projects{
+        margin: 0;
+    }
     .projects p{
         font-family: PopReg;
         font-size: 14px;
     }
     .projects h3{
         font-size:18px;
+        margin-right: -40px;
     }
 
     .app-1{
@@ -501,10 +504,13 @@ html{
     }
     .textwithpicture {
         display: block;
+        margin-right: -40px;
     }
     .textwithpicture p {
         padding-left: 0;
         text-align: justify;
+        padding-right: 13px;
+
     }
     .modal-content {
         height: auto;
@@ -516,9 +522,16 @@ html{
         margin: 0;
     }
     .scrolling{
-        margin-right: -75px;
-        margin-left: -75px;
-        margin-top: 10px;
+        margin-top: 100px;
+        margin-right: 10px;
+        padding-left: 13px;
+    }
+    .link-1{
+        margin-left: -12px;
+        margin-right: 0;
+    }
+    .link-1 a{
+        text-decoration: none;
     }
     
   }
