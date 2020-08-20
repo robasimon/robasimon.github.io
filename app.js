@@ -76,15 +76,14 @@ function init() {
         dot.classList.add("active");
     }
     function nextSlide(pageNumber) {
-        if (pageNumber == 2){
-            return;
-        }
+    
         if (pageNumber == 3) {
             pageNumber = 2;
         }
-        if (current == pageNumber) {
+        else if (current == pageNumber) {
             return;
         }
+        
 
         const nextPage = pages[pageNumber];
         const currentPage = pages[current];
