@@ -162,6 +162,12 @@ nav svg{
     text-align: center;
     
 }
+.textwithpicture{
+    display: flex;
+}
+.textwithpicture p{
+    padding-left: 25px;
+}
 .scrolling{
     height: 70vh;
     padding-bottom: 20%;
@@ -476,6 +482,40 @@ html{
         padding: 0px 0px 20px 0px;
     }
     
+    .projects p{
+        font-family: PopReg;
+        font-size: 14px;
+    }
+    .projects h3{
+        font-size:18px;
+    }
+
+    .app-1{
+        margin: auto;
+        padding: 0;
+        max-width: 30vw;
+        height: auto;
+        width: 50%;
+        position: relative;
+        
+    }
+    .textwithpicture {
+        display: block;
+    }
+    .textwithpicture p {
+        padding-left: 0;
+        text-align: justify;
+    }
+    .modal-content {
+        height: auto;
+        width: auto;
+        max-width: 50vw;
+    }
+    .modal-app-1{
+        padding: 0;
+        margin: 0;
+    }
+
   }
   @media screen and (max-width: 440px){
     

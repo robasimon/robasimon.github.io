@@ -2,55 +2,35 @@ function init() {
     const slides = document.querySelectorAll(".slide");
     const pages = document.querySelectorAll(".page");
     const mobilePages = document.querySelectorAll(".navigation")
-    mobile1 = document.querySelector(".navigation-1");
-    mobile2 = document.querySelector(".navigation-2");
+
     let current = 0;
-    // mobile1.addEventListener("click", function(){
-    //     homePage();
-    // });
-    // mobile2.addEventListener("click", function(){
-    //     homePage2();
-    // });
-    // mobilePages.forEach((page,index) => {
-    //     page.addEventListener('click', function(){
-    //         console.log(mobilePages)
-    //         changeDots(this);
-    //         nextSlide(index);
-    //     });
-    // });
+
+    mobilePages.forEach((page,index) => {
+        page.addEventListener('click', function(){
+            console.log(index)
+            //changeDots(this);
+            nextSlide(index);
+        });
+    });
+    
     slides.forEach((slide, index) => {
         slide.addEventListener('click', function () {
             changeDots(this);
             nextSlide(index);
         });
     });
-    // function homePage(){
-    //     const nextPage = pages[0];
-    //     const currentPage = pages[1];
-    //     const nextText = nextPage.querySelector(".details");
-    //     const currentText = currentPage.querySelector(".details");
-    //     const tl = new TimelineMax();
-    //     tl.fromTo(currentPage, 0.1, {opacity: 1}, {opacity: 0})
-    //     .fromTo(nextPage, 0.1, {opacity: 0}, {opacity: 1},"-=0.1s")
-    //     .fromTo(currentText, 0.1, {opacity: 1}, {opacity: 0})
-    //     .fromTo(nextText, 0.1, {opacity: 0}, {opacity: 1},"-=0.3s");
-    // }
-    // function homePage2(){
-    //     const nextPage = pages[1];
-    //     const currentPage = pages[0];
-    //     const nextText = nextPage.querySelector(".details");
-    //     const currentText = currentPage.querySelector(".details");
-    //     const tl = new TimelineMax();
-    //     tl.fromTo(currentPage, 0.1, {opacity: 1}, {opacity: 0})
-    //     .fromTo(nextPage, 0.1, {opacity: 0}, {opacity: 1},"-=0.1s")
-    //     .fromTo(currentText, 0.1, {opacity: 1}, {opacity: 0})
-    //     .fromTo(nextText, 0.1, {opacity: 0}, {opacity: 1},"-=0.3s");
-    // }
+    
     // Get the modal
     var modal = document.getElementById("myModal");
+    var modal1 = document.getElementById("myModal1");
+    var modal2 = document.getElementById("myModal2");
+    var modal3 = document.getElementById("myModal3");
 
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
+    var btn1 = document.getElementById("myBtn1");
+    var btn2 = document.getElementById("myBtn2");
+    var btn3 = document.getElementById("myBtn3");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -58,6 +38,15 @@ function init() {
     // When the user clicks the button, open the modal 
     btn.onclick = function () {
         modal.style.display = "block";
+    }
+    btn1.onclick = function () {
+        modal1.style.display = "block";
+    }
+    btn2.onclick = function () {
+        modal2.style.display = "block";
+    }
+    btn3.onclick = function () {
+        modal3.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
@@ -69,6 +58,15 @@ function init() {
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        }
+        else if (event.target == modal1){
+            modal1.style.display = "none";
+        }
+        else if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+        else if (event.target == modal3) {
+            modal3.style.display = "none";
         }
     }
     function changeDots(dot) {
