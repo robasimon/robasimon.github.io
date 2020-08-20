@@ -76,11 +76,14 @@ function init() {
         dot.classList.add("active");
     }
     function nextSlide(pageNumber) {
+        if (pageNumber == 2){
+            return;
+        }
         if (pageNumber == 3) {
             pageNumber = 2;
         }
         if (current == pageNumber) {
-            return
+            return;
         }
 
         const nextPage = pages[pageNumber];
@@ -105,7 +108,6 @@ function init() {
     const navOpen = document.querySelector('.nav-open');
     const contact = document.querySelector('.contact');
     const logo = document.querySelector('.logo');
-
     const tl = new TimelineMax({ paused: true, reversed: true });
 
     tl.to(navOpen, 0.2, { y: 0 })
@@ -116,7 +118,11 @@ function init() {
     menu.addEventListener('click', () => {
         tl.reversed() ? tl.play() : tl.reverse();
     });
-
+    window.onclick = function(event){
+        if (event.target == navOpen){
+            tl.reverse();
+        }
+    }
 }
 
 
