@@ -2,14 +2,21 @@ function init() {
     const slides = document.querySelectorAll(".slide");
     const pages = document.querySelectorAll(".page");
     const mobilePages = document.querySelectorAll(".navigation")
+    const menu = document.querySelector('.menu');
+    const menuLines = document.querySelectorAll('.menu line');
+    const navOpen = document.querySelector('.nav-open');
+    const contact = document.querySelector('.contact');
+    const logo = document.querySelector('.logo');
+    const tl2 = new TimelineMax({ paused: true, reversed: true });
 
     let current = 0;
 
     mobilePages.forEach((page,index) => {
         page.addEventListener('click', function(){
-            console.log(index)
+            //console.log(index)
             //changeDots(this);
             nextSlide(index);
+            tl2.reverse();
         });
     });
     
@@ -62,6 +69,16 @@ function init() {
         });
         dot.classList.add("active");
     }
+
+    // Open and close the nav bar
+    tl2.to(navOpen, 0.2, { y: 0 })
+    .fromTo(contact, 0.2, { opacity: 0, y: 10 }, { opacity: 1, y: 0 })
+    .fromTo(logo, 0.2, { color: 'white' }, { color: 'black' }, "-=.1")
+    .fromTo(menuLines, 0.2, { stroke: 'white' }, { stroke: 'black' }, "-=1");
+    menu.addEventListener('click', () => {
+        tl2.reversed() ? tl2.play() : tl2.reverse();
+    });
+
     function nextSlide(pageNumber) {
     
         if (pageNumber == 3) {
@@ -87,26 +104,11 @@ function init() {
         current = pageNumber;
 
     }
+    
 
-
-    const menu = document.querySelector('.menu');
-    const menuLines = document.querySelectorAll('.menu line');
-    const navOpen = document.querySelector('.nav-open');
-    const contact = document.querySelector('.contact');
-    const logo = document.querySelector('.logo');
-    const tl = new TimelineMax({ paused: true, reversed: true });
-
-    tl.to(navOpen, 0.2, { y: 0 })
-        .fromTo(contact, 0.2, { opacity: 0, y: 10 }, { opacity: 1, y: 0 })
-        .fromTo(logo, 0.2, { color: 'white' }, { color: 'black' }, "-=.1")
-        .fromTo(menuLines, 0.2, { stroke: 'white' }, { stroke: 'black' }, "-=1");
-
-    menu.addEventListener('click', () => {
-        tl.reversed() ? tl.play() : tl.reverse();
-    });
     window.onclick = function(event){
         if (event.target == navOpen){
-            tl.reverse();
+            tl2.reverse();
         }
         if (event.target == modal) {
             modal.style.display = "none";
